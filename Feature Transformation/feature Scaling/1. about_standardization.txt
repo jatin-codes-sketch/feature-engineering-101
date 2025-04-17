@@ -1,0 +1,35 @@
+📘 STANDARDIZATION IN FEATURE ENGINEERING
+
+🔹 What is Standardization?
+Standardization is a feature scaling technique used to bring all features onto a similar scale. 
+It transforms the data so that each feature has:
+- Mean = 0
+- Standard Deviation = 1
+
+Formula:
+    z = (x - μ) / σ
+
+Where:
+    x  = original value
+    μ  = mean of the feature
+    σ  = standard deviation of the feature
+    z  = standardized value
+
+🔹 Why Use Standardization?
+- Some machine learning models (like SVM, KNN, Logistic Regression, Linear Regression) perform better when data is standardized.
+- It helps features with larger values not dominate the model.
+- It improves convergence speed during training.
+- It makes the model more stable and accurate.
+
+🔹 When to Use Standardization?
+- When your features are normally distributed or close to it.
+- When using models that are sensitive to feature scales.
+
+🔹 How to Apply Standardization in Python:
+Using scikit-learn:
+
+```python
+from sklearn.preprocessing import StandardScaler
+
+scaler = StandardScaler()
+X_scaled = scaler.fit_transform(X)
