@@ -1,0 +1,42 @@
+📘 MAXABS SCALER IN FEATURE ENGINEERING
+
+🔹 What is MaxAbsScaler?
+MaxAbsScaler is a feature scaling technique that scales each feature by its maximum absolute value. It transforms the data into the range [-1, 1] without shifting the mean or breaking sparsity.
+
+Formula:
+
+                    𝑧=x/max(|x|)
+
+where: 
+    x=original value
+    max(|x|)=maximum absolute value of the feature 
+    z=scaled value
+
+
+🔹 Why Use MaxAbsScaler?
+
+It preserves the sparsity of data (important for sparse datasets like text data).
+
+Does not shift/center the data (no mean subtraction).
+
+Useful when you want to scale data but keep zero entries unchanged.
+
+Scales features into the range [-1, 1].
+
+🔹 When to Use MaxAbsScaler?
+
+For datasets with many zero values (sparse data).
+
+When features have both positive and negative values and you want to keep the distribution centered.
+
+When you want simple scaling without changing the mean.
+
+🔹 How to Apply MaxAbsScaler in Python:
+Using scikit-learn:
+
+python
+Copy code
+from sklearn.preprocessing import MaxAbsScaler
+
+scaler = MaxAbsScaler()
+X_scaled = scaler.fit_transform(X)
