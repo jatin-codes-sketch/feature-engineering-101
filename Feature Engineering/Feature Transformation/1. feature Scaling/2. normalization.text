@@ -1,0 +1,48 @@
+📘 NORMALIZATION IN FEATURE ENGINEERING
+🔹 What is Normalization?
+Normalization is a feature scaling technique used to rescale the values of numerical features so that they fall within a specific range, usually [0, 1].
+
+It ensures that all features contribute equally to the model and that no feature with a larger scale dominates the learning process.
+
+🔹 The Formula (Min-Max Scaling)
+Normalization typically uses Min-Max Scaling, and the formula is:
+
+arduino
+Copy
+Edit
+x_norm = (x - min) / (max - min)
+Where:
+
+x = original value
+
+min = minimum value of the feature
+
+max = maximum value of the feature
+
+x_norm = normalized value between 0 and 1
+
+🔹 Why is Normalization Important?
+Normalization is essential when you're working with machine learning models that are sensitive to feature magnitude or distance, such as:
+
+K-Nearest Neighbors (KNN)
+
+Neural Networks
+
+Logistic Regression
+
+Support Vector Machines (SVM)
+
+These algorithms may perform poorly if features have drastically different scales.
+
+🔹 When to Use Normalization
+You should use normalization when:
+
+✅ You’re using distance-based models like KNN, K-Means, SVM, etc.
+✅ Your data has non-Gaussian (not normal) distribution.
+✅ Your features have different units or ranges, e.g.:
+
+Age (0–100)
+
+Income (₹20,000 – ₹10,00,000)
+
+Ratings (0–5)
